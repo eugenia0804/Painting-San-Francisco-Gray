@@ -1,44 +1,65 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  #shape-container {
-    text-align: center;
-  }
-  
-  #shape {
-    display: flex;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    border: 4px solid black;
-    border-radius: 20px;
-    background-color: white;
-    align-items: center;
-  }
-  
-  #controls {
-    margin-top: 20px;
-    display: flex;
+  font-family: 'Georgia', serif; /* Use Georgia as the font for the body text */
+  margin: 0;
+  padding: 0;
+  font-size: 20px; /* Increase the font size for all text */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px; /* Adjust padding to be distance from the sidebar image */
+  padding-right: 200px; /* Add additional padding on the right side */
+}
+
+.article {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-right: 10px; /* Add margin to create space between the article and the sidebar */
+  overflow-y: auto; /* Enable vertical scrolling for the article */
+}
+
+.sidebar {
+  width: 100px; /* Keep the desired width of the sidebar */
+  height: 100vh; /* Adjust the height to fill the remaining viewport height after considering top and bottom padding */
+  position: fixed; /* Change position to fixed to ensure it sticks to the edge of the screen */
+  top: 0px;
+}
+
+.sidebar-left {
+  left: 0px;
+}
+
+.sidebar-right {
+  right: 0px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 0px;
+  height: 100vh;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
     align-items: center;
+    padding-left: 30px; /* Adjust padding to be distance from the sidebar image */
+    padding-right: 30px; /* Add additional padding on the right side */
   }
-  
-  #slideshow-controls button {
-    margin: 10px;
-    padding: 15px;
-    font-size: 16px;
+  .article {
+    max-width: 100%;
+    margin: 0;
   }
-  
-  #red-slider,
-  #green-slider,
-  #blue-slider {
-    width: 80%;
-    margin: 10px;
+  .sidebar {
+    display: none; /* Hide the sidebar images */
   }
-  
+}
+#map {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}

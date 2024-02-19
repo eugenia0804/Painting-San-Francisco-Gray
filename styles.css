@@ -2,7 +2,7 @@ body {
   font-family: 'Georgia', serif; /* Use Georgia as the font for the body text */
   margin: 0;
   padding: 0;
-  font-size: 20px; /* Increase the font size for all text */
+  font-size: 18px; /* Increase the font size for all text */
 }
 
 .container {
@@ -35,11 +35,62 @@ body {
   right: 0px;
 }
 
-.image {
+.side-image {
   width: 100%;
   border-radius: 0px;
   height: 100vh;
 }
+
+#photo {
+  display: block;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  top: 5px;
+  bottom: 5px;
+}
+
+
+.map-container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#hover-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(238, 238, 238, 0.95); /* Dark background with some transparency */
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5); /* Slightly darker border */
+  display: none;
+  cursor: pointer; /* Add pointer cursor */
+}
+
+#hover-window .content {
+  text-align: center;
+}
+
+#hover-image {
+  max-width: 80%; /* Make it big but smaller than the image */
+  height: auto;
+}
+
+#hover-text {
+  color: black;
+  margin-top: 10px;
+}
+
+
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
@@ -56,10 +107,59 @@ body {
   .sidebar {
     display: none; /* Hide the sidebar images */
   }
+  .map-container {
+    position: relative; /* Ensure relative positioning for absolute positioning of the hover window */
+  }
+  #hover-window {
+    position: absolute;
+    top: calc(100% + 20px); /* Display the hover window below the image with some spacing */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-#map {
-  max-width: 80%;
-  height: auto;
+
+
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  max-height: 720px;
+  overflow: hidden;
+}
+
+.gallery {
   display: block;
-  margin: 0 auto; /* Center the image horizontally */
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery img {
+  display: block;
+  max-width: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }

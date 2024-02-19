@@ -1,3 +1,5 @@
+// Scroll Effect
+
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
   var image1 = document.getElementById('sidebarImage1');
@@ -17,6 +19,7 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Gallery at the top
 let currentImageIndex = 1;
 
 function changeImage(n) {
@@ -34,3 +37,35 @@ function changeImage(n) {
 setInterval(function() {
   changeImage(1);
 }, 2000);
+
+
+// Hover effect on map
+document.addEventListener("DOMContentLoaded", function() {
+  const clickablePoints = document.querySelectorAll('.clickable-point');
+  const hoverBoxes = document.querySelectorAll('.hover-box');
+
+  clickablePoints.forEach(function(point) {
+      point.addEventListener('click', function(event) {
+          const targetId = this.getAttribute('data-target');
+          hideAllHoverBoxes();
+          document.getElementById(targetId).style.display = 'block';
+          event.stopPropagation();
+      });
+  });
+
+  hoverBoxes.forEach(function(box) {
+      box.addEventListener('click', function(event) {
+          event.stopPropagation();
+      });
+  });
+
+  document.addEventListener('click', function() {
+      hideAllHoverBoxes();
+  });
+
+  function hideAllHoverBoxes() {
+      hoverBoxes.forEach(function(box) {
+          box.style.display = 'none';
+      });
+  }
+});

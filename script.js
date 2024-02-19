@@ -1,5 +1,6 @@
-// Scroll Effect
 
+
+// Scroll Effect
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
   var image1 = document.getElementById('sidebarImage1');
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const hoverBoxes = document.querySelectorAll('.hover-box');
 
   clickablePoints.forEach(function(point) {
-      point.addEventListener('click', function(event) {
+      point.addEventListener('mouseenter', function(event) {
           const targetId = this.getAttribute('data-target');
           hideAllHoverBoxes();
           document.getElementById(targetId).style.display = 'block';
@@ -54,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   hoverBoxes.forEach(function(box) {
-      box.addEventListener('click', function(event) {
+      box.addEventListener('mouseleave', function(event) {
+          this.style.display = 'none';
           event.stopPropagation();
       });
   });

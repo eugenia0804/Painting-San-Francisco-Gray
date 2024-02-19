@@ -2,14 +2,30 @@ body {
   font-family: 'Georgia', serif; /* Use Georgia as the font for the body text */
   margin: 0;
   padding: 0;
-  font-size: 18px; /* Increase the font size for all text */
+  font-size: 17px; /* Increase the font size for all text */
+}
+
+h1 {
+  line-height: 100%;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  padding-left: 200px; /* Adjust padding to be distance from the sidebar image */
-  padding-right: 200px; /* Add additional padding on the right side */
+  padding-left: 25%; /* Adjust padding to be distance from the sidebar image */
+  padding-right: 25%; /* Add additional padding on the right side */
+  line-height: 140%;
+}
+
+p.special::first-letter {
+  font-size: 36px; /* increase the font size of the first letter */
+  float: left; /* float the first letter to the left */
+  margin-right: 4px; /* add some margin to separate the first letter from the rest of the text */
+  margin-bottom: -6px; /* adjust the margin to make the first letter sink in */
+}
+
+p.special::first-line {
+  margin-left: 40px; /* add margin to the first line to make space for the first letter */
 }
 
 .article {
@@ -118,27 +134,28 @@ body {
 .hover-box {
   position: absolute;
   display: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
   padding: 8px;
   border-radius: 5px;
   z-index: 1;
   font-size: 12px;
+  text-align: center;
+}
+
+.clickable-point {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red; /* for debugging visibility */
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .hover-box img {
   max-width: 100%;
   display: inline-block;
   height: auto;
-}
-
-.clickable-point {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: none; /* for debugging visibility */
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .hover-box {
@@ -154,7 +171,16 @@ body {
     align-items: center;
     padding-left: 30px; /* Adjust padding to be distance from the sidebar image */
     padding-right: 30px; /* Add additional padding on the right side */
+    font-size: 12px;
   }
+
+  p.special::first-letter {
+    font-size: 30px; /* increase the font size of the first letter */
+    float: left; /* float the first letter to the left */
+    margin-right: 4px; /* add some margin to separate the first letter from the rest of the text */
+    margin-bottom: -6px; /* adjust the margin to make the first letter sink in */
+  }
+
   .article {
     max-width: 100%;
     margin: 0;
@@ -162,7 +188,6 @@ body {
   .sidebar {
     display: none; /* Hide the sidebar images */
   }
-
 
   .hover-box {
     position: relative;

@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const hoverBoxes = document.querySelectorAll('.hover-box');
 
   clickablePoints.forEach(function(point) {
-      point.addEventListener('mouseenter', function(event) {
+      point.addEventListener('click', function(event) {
           const targetId = this.getAttribute('data-target');
           hideAllHoverBoxes();
           document.getElementById(targetId).style.display = 'block';
@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   hoverBoxes.forEach(function(box) {
-      box.addEventListener('mouseleave', function(event) {
-          this.style.display = 'none';
+      box.addEventListener('click', function(event) {
           event.stopPropagation();
       });
   });

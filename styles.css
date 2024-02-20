@@ -9,6 +9,14 @@ h1 {
   line-height: 100%;
 }
 
+h5 {
+  font-weight: 200;
+}
+
+a {
+  color: darkblue;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -20,8 +28,8 @@ h1 {
 p.special::first-letter {
   font-size: 36px; /* increase the font size of the first letter */
   float: left; /* float the first letter to the left */
-  margin-right: 4px; /* add some margin to separate the first letter from the rest of the text */
-  margin-bottom: -6px; /* adjust the margin to make the first letter sink in */
+  margin-right: 2px; /* add some margin to separate the first letter from the rest of the text */
+  margin-bottom: -10px; /* adjust the margin to make the first letter sink in */
 }
 
 p.special::first-line {
@@ -31,13 +39,13 @@ p.special::first-line {
 .article {
   flex-grow: 1;
   background-color: #f9f9f9;
-  padding: 20px;
-  margin-right: 10px; /* Add margin to create space between the article and the sidebar */
+  padding: 10%;
+  margin-right: 0px; /* Add margin to create space between the article and the sidebar */
   overflow-y: auto; /* Enable vertical scrolling for the article */
 }
 
 .sidebar {
-  width: 100px; /* Keep the desired width of the sidebar */
+  width: 25%; /* Keep the desired width of the sidebar */
   height: 100vh; /* Adjust the height to fill the remaining viewport height after considering top and bottom padding */
   position: fixed; /* Change position to fixed to ensure it sticks to the edge of the screen */
   top: 0px;
@@ -59,7 +67,7 @@ p.special::first-line {
 
 #photo {
   display: block;
-  width: 80%;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   top: 5px;
@@ -95,7 +103,7 @@ p.special::first-line {
   align-items: center;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: -20px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -120,7 +128,7 @@ p.special::first-line {
 }
 
 .image-container {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -147,7 +155,7 @@ p.special::first-line {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: red; /* for debugging visibility */
+  background-color: none; /* for debugging visibility */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -175,10 +183,10 @@ p.special::first-line {
   }
 
   p.special::first-letter {
-    font-size: 30px; /* increase the font size of the first letter */
+    font-size: 26px; /* increase the font size of the first letter */
     float: left; /* float the first letter to the left */
-    margin-right: 4px; /* add some margin to separate the first letter from the rest of the text */
-    margin-bottom: -6px; /* adjust the margin to make the first letter sink in */
+    margin-right: 2px; /* add some margin to separate the first letter from the rest of the text */
+    margin-bottom: -12px; /* adjust the margin to make the first letter sink in */
   }
 
   .article {

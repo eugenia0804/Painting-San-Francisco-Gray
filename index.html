@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visual Story Telling</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://use.typekit.net/jkw7mvu.css">
+<link rel="stylesheet" href="https://use.typekit.net/skz8dtw.css">
 </head>
 <body>
 
@@ -32,30 +34,35 @@
 
       <div class="map-container">
         <div class="image-container">
-            <img src="images/map.png" alt="Map of Downtown San Francisco">
+            <img id="background-photo" src="images/map.png" alt="Map of Downtown San Francisco">
             <div class="hover-box" id="hover-box-1">
-                <h2>Nob Hill</h2>
-                <img src="images/hover_image.png" alt="Image 1">
+                <button class="close-button" onclick="closeHoverBox(this)">X</button>
+                <h3>Nob Hill</h3>
+                <img src="images/hover-image-4.png" alt="Image 1">
                 <p>Text for Hover Box 1, Text for Hover Box 1, Text for Hover Box 1</p>
             </div>
             <div class="hover-box" id="hover-box-2">
-              <h2>Hover Box 2</h2>
-              <img src="images/hover_image.png" alt="Image 2">
+              <button class="close-button" onclick="closeHoverBox(this)">X</button>
+              <h3>Hayes Valley</h3>
+              <img src="images/hover-image-2.png" alt="Image 2">
               <p>Text for Hover Box 2</p>
             </div>
             <div class="hover-box" id="hover-box-3">
-              <h2>Hover Box 3</h2>
-              <img src="images/hover_image.png" alt="Image 3">
+              <button class="close-button" onclick="closeHoverBox(this)">X</button>
+              <h3>Castro</h3>
+              <img src="images/hover-image-1.png" alt="Image 3">
               <p>Text for Hover Box 3</p>
             </div>
             <div class="hover-box" id="hover-box-4">
-              <h2>Hover Box 4</h2>
-              <img src="images/hover_image.png" alt="Image 4">
+              <button class="close-button" onclick="closeHoverBox(this)">X</button>
+              <h3>Noe Valley</h3>
+              <img src="images/hover-image-5.png" alt="Image 4">
               <p>Text for Hover Box 4</p>
             </div>
             <div class="hover-box" id="hover-box-5">
-              <h2>Hover Box 5</h2>
-              <img src="images/hover_image.png" alt="Image 5">
+              <button class="close-button" onclick="closeHoverBox(this)">X</button>
+              <h3>Mission</h3>
+              <img src="images/hover-image-3.png" alt="Image 5">
               <p>Text for Hover Box 5</p>
             </div>
         </div>

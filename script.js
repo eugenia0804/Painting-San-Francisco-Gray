@@ -44,12 +44,15 @@ setInterval(function() {
 document.addEventListener("DOMContentLoaded", function() {
   const clickablePoints = document.querySelectorAll('.clickable-point');
   const hoverBoxes = document.querySelectorAll('.hover-box');
+  const backgroundPhoto = document.getElementById('background-photo');
+  
 
   clickablePoints.forEach(function(point) {
       point.addEventListener('click', function(event) {
           const targetId = this.getAttribute('data-target');
           hideAllHoverBoxes();
           document.getElementById(targetId).style.display = 'block';
+          backgroundPhoto.classList.add('darkened');
           event.stopPropagation();
       });
   });
@@ -62,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener('click', function() {
       hideAllHoverBoxes();
+      backgroundPhoto.classList.remove('darkened');
   });
 
   function hideAllHoverBoxes() {
@@ -69,4 +73,21 @@ document.addEventListener("DOMContentLoaded", function() {
           box.style.display = 'none';
       });
   }
+
+  function closeHoverBox(button) {
+      const hoverBox = button.closest('.hover-box');
+      hoverBox.style.display = 'none';
+      // Optionally, you can remove the darkened background if no hover boxes are open
+      if (document.querySelectorAll('.hover-box[style="display: block;"]').length === 0) {
+          document.getElementById('background-photo').classList.remove('darkened');
+      }
+  }
+
+  // Attach event listeners to close buttons
+  const closeButtons = document.querySelectorAll('.close-button');
+  closeButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+          closeHoverBox(this);
+      });
+  });
 });

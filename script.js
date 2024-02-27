@@ -1,20 +1,17 @@
-
-
-// Scroll Effect
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
   var image1 = document.getElementById('sidebarImage1');
   var image2 = document.getElementById('sidebarImage2');
   var containerHeight = document.querySelector('.container').clientHeight;
-  var maxScroll = containerHeight; // Adjust this value if needed
+  var maxScroll = containerHeight - window.innerHeight; // Adjust this value if needed
 
   // Calculate grayscale value based on scroll position
-  var grayscaleValue = 100 - (scrollPosition / maxScroll) * 100;
+  var grayscaleValue = 100 - Math.min(((scrollPosition - window.innerHeight) / maxScroll) * 100, 100);
   if (grayscaleValue < 0) {
-    grayscaleValue = 0; // Ensure grayscale value doesn't go below 0
+      grayscaleValue = 0; // Ensure grayscale value doesn't go below 0
   }
 
-  // Apply grayscale filter to images
+  // Apply grayscale filter to images after the first 100vh
   image1.style.filter = "grayscale(" + grayscaleValue + "%)";
   image2.style.filter = "grayscale(" + grayscaleValue + "%)";
 });

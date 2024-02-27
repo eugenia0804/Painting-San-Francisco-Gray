@@ -21,8 +21,6 @@ h2, h3, h5 {
   font-style: normal;
 }
 
-
-
 a {
   color: darkblue;
 }
@@ -38,7 +36,7 @@ a {
 p.special::first-letter {
   font-size: 48px; /* increase the font size of the first letter */
   float: left; /* float the first letter to the left */
-  margin-right: 2px; /* add some margin to separate the first letter from the rest of the text */
+  margin-right: 3px; /* add some margin to separate the first letter from the rest of the text */
   margin-top: 13px;
   margin-bottom: 10px; /* adjust the margin to make the first letter sink in */
 }
@@ -51,29 +49,36 @@ p.special::first-line {
   flex-grow: 1;
   background-color: #f9f9f9;
   padding: 10%;
+  padding-top: 3%;
   margin-right: 0px; /* Add margin to create space between the article and the sidebar */
   overflow-y: auto; /* Enable vertical scrolling for the article */
 }
 
 .sidebar {
   width: 25%; /* Keep the desired width of the sidebar */
-  height: 100vh; /* Adjust the height to fill the remaining viewport height after considering top and bottom padding */
+  height: calc(100vh); /* Adjust the height to fill the entire viewport height */
   position: fixed; /* Change position to fixed to ensure it sticks to the edge of the screen */
-  top: 0px;
+  top: 0; /* Remove top padding */
+  bottom: 0; /* Remove bottom padding */
+  transition: height 0.3s ease; /* Add transition for smoother height changes */
+  z-index: 0; /* Set a lower z-index */
 }
 
 .sidebar-left {
   left: 0px;
+  z-index: 0;
 }
 
 .sidebar-right {
   right: 0px;
+  z-index: 0;
 }
 
 .side-image {
   width: 100%;
   border-radius: 0px;
   height: 100vh;
+  z-index: 0;
 }
 
 #photo {
@@ -200,13 +205,52 @@ p.special::first-line {
   transform: translate(-50%, -50%);
 }
 
+.hover-box p{
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
 
-@media only screen and (max-width: 768px) {
+.hover-box h3{
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+
+/* Landing Page */
+
+.landing-page {
+  display: flex;
+  height: 100vh;
+  z-index: 1;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.left-section {
+  background-color: #f0f0f0;
+}
+
+.right-section {
+  background-color: #e0e0e0;
+}
+
+
+@media only screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
     align-items: center;
-    padding-left: 30px; /* Adjust padding to be distance from the sidebar image */
-    padding-right: 30px; /* Add additional padding on the right side */
+    padding-left: 0px; /* Adjust padding to be distance from the sidebar image */
+    padding-right: 0px; /* Add additional padding on the right side */
     font-size: 15px;
   }
 
@@ -250,15 +294,33 @@ p.special::first-line {
   }
 
   p.special::first-letter {
-    font-size: 40px; /* increase the font size of the first letter */
+    font-size: 48px; /* increase the font size of the first letter */
     float: left; /* float the first letter to the left */
-    margin-right: 2px; /* add some margin to separate the first letter from the rest of the text */
-    margin-top: 10px;
+    margin-right: 3px; /* add some margin to separate the first letter from the rest of the text */
+    margin-top: 12px;
     margin-bottom: 0px; /* adjust the margin to make the first letter sink in */
   }
   
   p.special::first-line {
-    margin-left: 40px; /* add margin to the first line to make space for the first letter */
+    margin-left: 48px; /* add margin to the first line to make space for the first letter */
   }
 
+  .right-section {
+    display: none;
+  }
+  
+  .article {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    padding: 10%;
+    padding-top: 3%;
+    margin-right: 0px; /* Add margin to create space between the article and the sidebar */
+    overflow-y: auto; /* Enable vertical scrolling for the article */
+  }
+
+  .hover-box p{
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.2;
+  }
 }

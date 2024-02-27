@@ -157,12 +157,13 @@ p.special::first-line {
 
 .close-button {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  right: 8px;
   background: none;
+  color: black;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .hover-box {
@@ -206,7 +207,7 @@ p.special::first-line {
     align-items: center;
     padding-left: 30px; /* Adjust padding to be distance from the sidebar image */
     padding-right: 30px; /* Add additional padding on the right side */
-    font-size: 12px;
+    font-size: 15px;
   }
 
   p.special::first-letter {
@@ -235,6 +236,17 @@ p.special::first-line {
     font-size: 10px;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.3); /* Add black outline */
+  }
+
+  .close-button {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
   }
 
   p.special::first-letter {

@@ -4,7 +4,7 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
-  font-size: 17px; /* Increase the font size for all text */
+  font-size: 18px; /* Increase the font size for all text */
 }
 
 h1 {
@@ -49,7 +49,7 @@ p.special::first-line {
   flex-grow: 1;
   background-color: #f9f9f9;
   padding: 10%;
-  padding-top: 3%;
+  padding-top: 5%;
   margin-right: 0px; /* Add margin to create space between the article and the sidebar */
   overflow-y: auto; /* Enable vertical scrolling for the article */
 }
@@ -138,6 +138,16 @@ p.special::first-line {
 
 
 /* Interactive Map */
+.map-instruction{
+  font-size: 16px;
+  color: rgb(0,0,0,0.75);
+}
+
+.map-method{
+  font-size: 14px;
+  text-align: right;
+  color: rgb(0,0,0,0.75);
+}
 
 .map-container {
   position: relative;
@@ -245,13 +255,13 @@ p.special::first-line {
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 850px) {
   .container {
     flex-direction: column;
     align-items: center;
     padding-left: 0px; /* Adjust padding to be distance from the sidebar image */
     padding-right: 0px; /* Add additional padding on the right side */
-    font-size: 15px;
+    font-size: 16px;
   }
 
   p.special::first-letter {
@@ -322,5 +332,16 @@ p.special::first-line {
     text-align: left;
     font-size: 12px;
     line-height: 1.2;
+  }
+
+  .map-instruction{
+    font-size: 14px;
+    color: rgb(0,0,0,0.75);
+  }
+
+  .map-method{
+    font-size: 12px;
+    text-align: right;
+    color: rgb(0,0,0,0.75);
   }
 }

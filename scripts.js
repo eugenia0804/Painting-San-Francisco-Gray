@@ -34,7 +34,7 @@ function changeImage(n) {
 // Automatically change image every 2 seconds
 setInterval(function() {
   changeImage(1);
-}, 2000);
+}, 3000);
 
 
 // Hover effect on map

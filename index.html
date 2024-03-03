@@ -11,14 +11,13 @@
 <body>
 
   <div class="landing-page">
-    <section class="left-section">
-      <h1>Left Section</h1>
-      <p>This is the left section content.</p>
-    </section>
-    <section class="right-section">
-      <h1>Right Section</h1>
-      <p>This is the right section content.</p>
-    </section>
+    <div class="gallery-container">
+      <img class="title" src="images/title.png">
+      <div class="gallery">
+        <img id="gallery-img" src="images/gallery-1.jpg" alt="Gallery Image">
+      </div>
+      <div id="transition-line"></div>
+    </div>
   </div>
 
   <div class="container">
@@ -119,15 +118,19 @@
       <p>“We had to change a lot of our house, to make it according to the trend.”</p>
       <p>The city itself does not prevent residents from repainting their houses according to their taste. “The Planning Code does not regulate the color of buildings,” city planner Kimberly Durandet wrote in an email. “We do conduct design reviews and consider materials and other design elements but not specifically color choices.”</p>
       <p>Despite her disappointment, Bongiovanni says that this lack of regulation is part of what makes San Francisco’s colorful landscape possible. “It’s one of the uniquenesses of the city, that people are free to express themselves through the colors of their houses. San Francisco has that freedom. I hope it never goes away.”</p>
+      <br>
 
+      <p class="game-instruction">Color Your Dream House</p>
+      <iframe src="game/game.html" width="100%" height="500"></iframe>
 
     </div>
     <div class="sidebar sidebar-right">
       <img class="side-image" src="images/sidebar.png" alt="Sidebar Image" id="sidebarImage2">
     </div>
   </div>
+  
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 
 </body>
 </html>

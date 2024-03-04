@@ -49,6 +49,7 @@ p.special::first-line {
   flex-grow: 1;
   background-color: #f9f9f9;
   padding: 10%;
+  padding-bottom: 0;
   padding-top: 5%;
   margin-right: 0px; /* Add margin to create space between the article and the sidebar */
   overflow-y: auto; /* Enable vertical scrolling for the article */
@@ -86,9 +87,8 @@ p.special::first-line {
   width: 100%;
   position: relative;
   margin: 0 auto;
-  top: 5px;
-  bottom: 5px;
 }
+
 
 /* Photo Gallery */
 
@@ -255,6 +255,14 @@ p.special::first-line {
   width: 100%;
 }
 
+.footnote {
+  font-family: "objektiv-mk2", sans-serif;
+  font-size: 12px; /* Adjust font size as needed */
+  color: #666; /* Set the text color */
+  margin-top: 10px; /* Add space above the footnote */
+  padding: 10px; /* Add padding for better readability */
+  border-top: 1px solid #ccc; /* Add a border on top */
+}
 
 @media only screen and (max-width: 850px) {
   .container {
@@ -325,6 +333,7 @@ p.special::first-line {
     background-color: #f9f9f9;
     padding: 10%;
     padding-top: 3%;
+    padding-bottom: 0;
     margin-right: 0px; /* Add margin to create space between the article and the sidebar */
     overflow-y: auto; /* Enable vertical scrolling for the article */
   }
@@ -362,6 +371,15 @@ p.special::first-line {
 
     width: 160%; /* Adjust the value to make the image bigger */
     height: 160%; /* Adjust the value to make the image bigger */
+  }
+
+  .footnote {
+    font-family: "objektiv-mk2", sans-serif;
+    font-size: 11px; /* Adjust font size as needed */
+    color: #666; /* Set the text color */
+    margin-top: 10px; /* Add space above the footnote */
+    padding: 10px; /* Add padding for better readability */
+    border-top: 1px solid #ccc; /* Add a border on top */
   }
   
 }
